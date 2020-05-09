@@ -1,0 +1,8 @@
+<a *ngFor="let report of All_reports" class="list-group-item list-group-item-action flex-column align-items-start" [routerLink]="['/reporte-admin']" routerLinkActive="router-link-active" >
+    <div class="d-flex w-100 justify-content-between" >
+      <h5 class="mb-1">{{report.id}}</h5>
+      <small class="text-muted">{{report.time}}</small>
+    </div>
+    <p class="mb-1">{{report.desc}}</p>
+    <small class="text-muted">{{report.name}} {{report.l_name}}</small>
+  </a>

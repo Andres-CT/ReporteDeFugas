@@ -1,0 +1,17 @@
+.chart-diplay{
+    display:flex;
+    width: 100%;
+    position: relative;
+    left: 4%;
+    
+    div + div {
+      margin-left:1%;
+      margin-right: 1%;  
+    }
+}
+h1, p {
+    text-align: center;
+}
+
+
+  
