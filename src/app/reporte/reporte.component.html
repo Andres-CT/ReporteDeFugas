@@ -1,0 +1,62 @@
+<app-header-no-ribbon></app-header-no-ribbon>
+<div class="container">
+    <div class="text-heading">
+      <br><br>
+      <h1>{{ "REPORT.TITLE" | translate }}</h1>
+      <br>
+      <h2>{{ "REPORT.SUBTITLE" | translate }}</h2>
+      <p class="text-secondary">
+        {{ "REPORT.DESCRIPTION" | translate }} 
+      </p>       
+    </div>
+    <form>
+      <div class="container-form">
+        <div class="form-row">
+          <div class="col">
+            <label >{{ "REPORT.NOMBRE" | translate }}</label>
+            <input type="text" class="form-control" placeholder="Nombre(s)">
+          </div>
+          <div class="col">
+            <label >{{ "REPORT.APELLIDO" | translate }}</label>
+            <input type="text" class="form-control" placeholder="Apellido(s)">
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="exampleInputEmail1">{{ "REPORT.CORREO" | translate }}</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu correo">
+          <small id="emailHelp" class="form-text text-muted">{{ "REPORT.PROTECCION" | translate }}</small>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">{{ "REPORT.DIRECCION" | translate }}</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Escriba la dirección">
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">{{ "REPORT.REFERENCIA" | translate }}</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Escriba una referencia (calle, avenida, etc.)">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">{{ "REPORT.PROFESION" | translate }}</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>{{ "REPORT.PROFESION1" | translate }}</option>
+            <option>{{ "REPORT.PROFESION2" | translate }}</option>
+            <option>{{ "REPORT.PROFESION3" | translate }}</option>
+            <option>{{ "REPORT.PROFESION4" | translate }}</option>
+            <option>{{ "REPORT.PROFESION5" | translate }}</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">{{ "REPORT.WRITEREPORT" | translate }}</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </div>
+    </form>
+    <div class="form-group">
+      <label for="exampleFormControlFile1">{{ "REPORT.IMAGEN" | translate }}</label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+      <small>Opcional*</small>
+
+    </div>
+    <a [routerLink]="['/cliente-enviado']" routerLinkActive="router-link-active"  class="btn btn-success" role="button">{{ "REPORT.ENVIAR" | translate }}</a>
+<br><br><br><br><br><br>
+</div>

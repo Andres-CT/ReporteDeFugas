@@ -1,0 +1,42 @@
+<app-header-admin></app-header-admin>
+<div class="container">
+    <br><br>
+    <h1>{{ "REPORTADMIN.TITLE" | translate }}</h1>
+      <h2>{{ "REPORTADMIN.SUBTITLE" | translate }} 0000001</h2>
+      <p class="text-secondary">{{ "REPORTADMIN.DESCRIPTION" | translate }}</p>  
+      <ul id="lista-reportes" class="list-group">
+        <li class="text-secondary">{{ "REPORT.NOMBRE" | translate }}</li>  
+        <li class="list-group-item">Abel</li>
+  
+        <li class="text-secondary">{{ "REPORT.APELLIDO" | translate }}</li>  
+        <li class="list-group-item">Martín</li>
+        
+        <li class="text-secondary">{{ "REPORT.CORREO" | translate }}</li>  
+        <li class="list-group-item">Morbi leo risus</li>
+        
+        <li class="text-secondary">{{ "REPORT.DIRECCION" | translate }}</li>  
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        
+        <li class="text-secondary">{{ "REPORT.REFERENCIA" | translate }}</li>  
+        <li class="list-group-item">Vestibulum at eros</li>
+        
+        <li class="text-secondary">{{ "REPORT.PROFESION" | translate }}</li>  
+        <li class="list-group-item">Vestibulum at eros</li>
+        
+        <li class="text-secondary">{{ "REPORT.WRITEREPORT" | translate }}</li>  
+        <li class="list-group-item">Vestibulum at eros</li>
+        
+        <li class="text-secondary">{{ "REPORT.IMAGEN" | translate }}</li>  
+      </ul>
+    <br>
+    <div class="border-top my-3"></div>
+    <br>
+    <div class="container-report-comments">
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">{{ "REPORTADMIN.COMENTARIO" | translate }}</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <a [routerLink]="['/reporte-enviado']" routerLinkActive="router-link-active"  class="btn btn-success">Enviar</a>
+    </div>
+    <br><br><br><br><br>
+</div>
