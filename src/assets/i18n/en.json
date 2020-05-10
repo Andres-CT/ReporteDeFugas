@@ -90,9 +90,9 @@
         "BUTTON": "Back to Reports"
     },
     "LISTA" : {
-        "TITLE": "Active Reports",
-        "SUBTITLE": "Welcome",
-        "DESCRIPTION": "To go inside the report, please click on it.",
+        "TITLE": "Total Reports",
+        "SUBTITLE": "List of all the reports made in the portal.",
+        "DESCRIPTION": "All reports done in the portal are on this list, the difference between the Reports tab is that the reports tab just includes the active reports.",
         "HORA1": "35 minutes", 
         "HORA2": "1 hour", 
         "HORA3": "1.3 hours", 

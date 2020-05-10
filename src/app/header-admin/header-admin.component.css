@@ -11923,6 +11923,14 @@ hr {
   height: 100px;
 }
 
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-bottom: 2px solid gainsboro;
+  z-index: 9;
+}
+
 /*# sourceMappingURL=activereports.css.map */
 
 /*# sourceMappingURL=header-admin.component.css.map */
