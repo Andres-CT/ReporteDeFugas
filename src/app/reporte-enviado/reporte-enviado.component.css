@@ -11928,4 +11928,8 @@ li {
   list-style-type: none;
 }
 
+.text-heading {
+  margin-top: 20%;
+}
+
 /*# sourceMappingURL=reporte-enviado.component.css.map */

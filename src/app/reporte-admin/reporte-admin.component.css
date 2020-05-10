@@ -11928,6 +11928,10 @@ li {
   list-style-type: none;
 }
 
+.text-heading {
+  margin-top: 12%;
+}
+
 /*# sourceMappingURL=report.css.map */
 
 /*# sourceMappingURL=reporte-admin.component.css.map */

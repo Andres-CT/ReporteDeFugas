@@ -91,9 +91,9 @@
         "BUTTON": "Regresar a Reportes"
     },
     "LISTA" : {
-        "TITLE": "Reportes Activos",
-        "SUBTITLE": "Bienvenido",
-        "DESCRIPTION": "Para ingresar a cada reporte, da clic en el.",
+        "TITLE": "Reportes Totales",
+        "SUBTITLE": "Lista de todos los reportes hechos en el portal.",
+        "DESCRIPTION": "En esta lista se encuentran todos los reportes hechos en el portal, a diferencia de la pestaña Reportes que contiene solo los reportes activos.",
         "HORA1": "35 minutos", 
         "HORA2": "1 hora", 
         "HORA3": "1.3 horas", 

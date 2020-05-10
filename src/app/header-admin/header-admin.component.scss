@@ -11217,5 +11217,12 @@ hr {
   width: auto;
   height: 100px;
 }
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-bottom: 2px solid rgb(220,220,220);
+  z-index:9;
+}
 
 /*# sourceMappingURL=activereports.css.map */
