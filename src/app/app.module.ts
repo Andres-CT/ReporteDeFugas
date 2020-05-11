@@ -16,6 +16,10 @@ import { AllReportsComponent } from './all-reports/all-reports-component/all-rep
 import { GraficaComponent } from './grafica/grafica.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+//Services
+import { DataApiService } from './services/data-api.service';
+
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -50,7 +54,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [],
+  providers: [DataApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
