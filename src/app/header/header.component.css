@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 .ribbon {
   width: 150px;
   height: 150px;
@@ -85,29 +83,30 @@
   transform: rotate(45deg);
 }
 
-#navbarNavDropdown{
+#navbarNavDropdown {
   text-align: center;
 }
+
 .nav-bar {
   height: 110px;
-  background-color: rgb(250, 250, 250);
+  background-color: #fafafa;
 }
-.navbar-toggler{
-  position: fixed;;
-  z-index:1000;
+
+.navbar-toggler {
+  position: fixed;
+  z-index: 1000;
   top: 60px;
 }
+
 @media screen and (max-width: 992px) {
-  .nav-item{
-    border-bottom: 0.2px solid lightgrey; 
+  .nav-item {
+    border-bottom: 0.2px solid lightgrey;
   }
-  .nav-link{
+
+  .nav-link {
     font-size: 15px;
   }
-  .navbar img {
-    min-width: 170px;
 }
-}
-
-
 /*Ribbon source: https://codepen.io/nxworld/pen/oLdoWb*/
+
+/*# sourceMappingURL=header.component.css.map */

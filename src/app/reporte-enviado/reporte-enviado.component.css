@@ -1,4 +1,3 @@
-
 .container .container-report-comments {
   text-align: center;
 }
@@ -9,8 +8,5 @@
   padding-right: 40px;
   margin: 5px;
 }
-@media screen and (max-width: 450px) {
-  .text-heading {
-    margin-top: 30%;
-  }
-}
+
+/*# sourceMappingURL=reporte-enviado.component.css.map */
