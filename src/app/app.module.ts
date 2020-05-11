@@ -12,11 +12,13 @@ import { HttpClientModule, HttpClient} from '@angular/common/http'
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { AppComponent } from './app.component';
 import { TranslateComponent } from './translate/translate.component';
-import { AllReportsComponent } from './all-reports/all-reports-components/all-reports.component';
+import { AllReportsComponent } from './all-reports/all-reports-component/all-reports.component';
 import { GraficaComponent } from './grafica/grafica.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 //Services
 import { DataApiService } from './services/data-api.service';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
