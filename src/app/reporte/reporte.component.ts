@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 //import { User } from './user'
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 //import { NgForm } from '@angular/forms';
-import { ReportserviceService } from '../reportservice.service';
+
 import { DataService } from '../data.service';
 @Component({
   selector: 'app-reporte',
