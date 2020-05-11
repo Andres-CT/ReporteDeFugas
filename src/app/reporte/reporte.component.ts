@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from './user'
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { NgForm } from '@angular/forms';
+import { ReportserviceService } from '../reportservice.service';
 
 @Component({
   selector: 'app-reporte',
@@ -9,12 +11,12 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 })
 export class ReporteComponent implements OnInit {
 
-  constructor(private fb: FormBuilder) { }
+  constructor(public fb: FormBuilder, public _reportService: ReportserviceService) { }
   tipoPersonas = ["Reportero","Agente de la SSP", "Transeunte", "Comerciante", "Otro"];
   userModel = new User('','','','','', '','', null);
 
   registrationForm= this.fb.group({
-    nombre: ['Jorge'],
+    nombre: [''],
     apellido: [''],
     correo: [''],
     direccion: [''],
@@ -35,8 +37,16 @@ export class ReporteComponent implements OnInit {
       comentario: new FormControl(''),
       imagen: new FormControl('')
   });*/
-  
+
   ngOnInit(): void {
   }
-
+  onSubmit() {
+    console.log(this.registrationForm.value);
+    /* 
+    this._reportService.reportservice(this.registrationForm.value)
+      .subscribe(
+        response => console.log('Success!', response),
+        error => console.log('Error!', error)
+      ); */
+  }
 }
