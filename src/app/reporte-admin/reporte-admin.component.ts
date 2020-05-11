@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {  ReporteComponent } from '../reporte/reporte.component';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-reporte-admin',
