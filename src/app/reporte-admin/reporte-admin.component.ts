@@ -9,11 +9,16 @@ import { DataService } from '../data.service';
 })
 export class ReporteAdminComponent implements OnInit {
   text='';
+  apellido = '';
   constructor(//public ReporteComponent: ReporteComponent
-    private data: DataService) {}
+  private data: DataService) {}
+  
+  
 
   ngOnInit(): void {
-    this.data.share.subscribe(x => this.text = x);
+    this.data.share.subscribe(a => this.text = a);
+    this.data.share2.subscribe(b => this.apellido = b);
+    
   }
   /*
   loadApiData() {

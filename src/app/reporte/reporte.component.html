@@ -21,7 +21,7 @@
           </div>
           <div class="col">
             <label >{{ "REPORT.APELLIDO" | translate }}</label>
-            <input type="text" class="form-control" placeholder="Apellido(s)" name = "apellido" formControlName="apellido">
+            <input type="text" class="form-control" placeholder="Apellido(s)" name = "apellido" formControlName="apellido" [(value)]="text" #apellido (keyup)="updateApellido(apellido.value)">
           </div>
         </div>
         <br>
@@ -53,7 +53,8 @@
           <input type="file" class="form-control-file" id="exampleFormControlFile1" name="imagen" formControlName="imagen">
           <small>Opcional*</small>
         </div>
-        <button [routerLink]="['/cliente-enviado']" routerLinkActive="router-link-active"  class="btn btn-success" type="button" (click)="onSubmit()">{{ "REPORT.ENVIAR" | translate }} </button>
+        <button [routerLink]="['/cliente-enviado']" routerLinkActive="router-link-active" class="btn btn-success" type="button" (click)="onSubmit()">{{ "REPORT.ENVIAR" | translate }} </button>
+        
       </div>
     </form>
 <br><br><br><br><br><br>
