@@ -1,4 +1,4 @@
-import { Report } from "./report"
+import { Report } from "../report"
 
 let DSC: string = "Hola buenas tardes quiero reportar una fuga en la calle...."
 

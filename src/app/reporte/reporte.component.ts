@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from './user'
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-reporte',
@@ -7,7 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReporteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
+
+  tipoPersonas = ["Reportero", "Agente de la SSP", "Transeunte", "Comerciante", "Otro"];
+  userModel = new User('', '', '', '', '', '', '', null);
+  
+  registrationForm = this.fb.group({
+    nombre: [''],
+    apellido: [''],
+    correo: [''],
+    direccion: [''],
+    referencia: [''],
+    tipoPersona: [''],
+    comentario: [''],
+    imagen: ['']
+  });
 
   ngOnInit(): void {
   }
