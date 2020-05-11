@@ -3,15 +3,15 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 //import { NgForm } from '@angular/forms';
 import { ReportserviceService } from '../reportservice.service';
-
+import { DataService } from '../data.service';
 @Component({
   selector: 'app-reporte',
   templateUrl: './reporte.component.html',
   styleUrls: ['./reporte.component.scss']
 })
 export class ReporteComponent implements OnInit {
-
-  constructor(public fb: FormBuilder, public _reportService: ReportserviceService) { }
+  text = '';
+  constructor(public fb: FormBuilder, private data: DataService) { }
   tipoPersonas = ["Reportero","Agente de la SSP", "Transeunte", "Comerciante", "Otro"];
   //userModel = new User('','','','','', '','', null);
 
@@ -40,6 +40,11 @@ export class ReporteComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  updateText(text){
+    this.data.updateData(text);
+  }
+
   onSubmit() {
     console.log(this.registrationForm.value);
     /* 
