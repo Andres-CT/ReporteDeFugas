@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from './user'
+//import { User } from './user'
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
-import { NgForm } from '@angular/forms';
+//import { NgForm } from '@angular/forms';
 import { ReportserviceService } from '../reportservice.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class ReporteComponent implements OnInit {
 
   constructor(public fb: FormBuilder, public _reportService: ReportserviceService) { }
   tipoPersonas = ["Reportero","Agente de la SSP", "Transeunte", "Comerciante", "Otro"];
-  userModel = new User('','','','','', '','', null);
+  //userModel = new User('','','','','', '','', null);
 
   registrationForm= this.fb.group({
     nombre: [''],
