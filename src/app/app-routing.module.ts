@@ -24,7 +24,6 @@ const routes: Routes = [
   { path: 'reporte-admin', component: ReporteAdminComponent},
   { path: 'reporte-enviado', component: ReporteEnviadoComponent},
   { path: 'grafica', component: GraficaComponent},
-
   { path: '**', component: PageNotFoundComponent}
 ];
 
