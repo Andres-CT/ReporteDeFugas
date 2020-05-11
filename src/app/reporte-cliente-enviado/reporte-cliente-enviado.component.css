@@ -1,6 +1,4 @@
-@charset "UTF-8";
-
-h1{
+h1 {
   margin-top: 0.5em;
 }
 
@@ -11,6 +9,9 @@ h1{
 .container .btn {
   display: inline-block;
 }
+
 .text-heading {
-  margin-top: 8% ;
+  margin-top: 8%;
 }
+
+/*# sourceMappingURL=reporte-cliente-enviado.component.css.map */

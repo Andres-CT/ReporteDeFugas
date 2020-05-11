@@ -1,14 +1,12 @@
-@charset "UTF-8";
-
 .container #report-number {
   text-align: center;
 }
 
-.col{
+.col {
   z-index: 0;
 }
 
-h2{
+h2 {
   margin-bottom: 0.5em;
 }
 
@@ -34,3 +32,5 @@ hr {
   padding-right: 30px;
   margin: 5px;
 }
+
+/*# sourceMappingURL=reporte.component.css.map */
