@@ -9,4 +9,5 @@ export class User {
         public comentario: string,
         public imagen: HTMLImageElement
     ){}
+
 }
