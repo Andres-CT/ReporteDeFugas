@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {  ReporteComponent } from '../reporte/reporte.component';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-reporte-admin',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReporteAdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    //public ReporteComponent: ReporteComponent
+  ) {}
 
   ngOnInit(): void {
   }
+  /*
+  loadApiData() {
+    this.ReporteComponent.registrationForm.setValue({
+        nombre: 'Jorge',
+        apellido: 'de la Vega',
+        correo: '',
+        direccion: '',
+        referencia: '',
+        tipoPersona: '',
+        comentario: '',
+        imagen: ''
+    })
+  }*/
 
 }
