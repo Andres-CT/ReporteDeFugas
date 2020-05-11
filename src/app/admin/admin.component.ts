@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
-
+  loginUserData = {}
+  constructor(public fb: FormBuilder) { }
+  
+  registrationForm= this.fb.group({
+    correo: [''],
+    contrasena: ['']
+  });
   ngOnInit(): void {
   }
-
+  onSubmit() {
+    console.log(this.registrationForm.value);
+  
+  }
 }
