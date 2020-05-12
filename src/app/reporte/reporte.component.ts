@@ -27,7 +27,6 @@ export class ReporteComponent implements OnInit {
 
   });
 
-  apellido= this.registrationForm.controls['apellido'].value.name;
   /*
   registrationForm = new FormGroup({
       nombre: new FormControl('Jorge'),
@@ -73,7 +72,6 @@ export class ReporteComponent implements OnInit {
         response => console.log('Success!', response),
         error => console.log('Error!', error)
       ); */
-    this.apellido = this.registrationForm.controls['apellido'].value.name;
   }
   
   

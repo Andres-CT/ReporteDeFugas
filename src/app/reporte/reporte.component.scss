@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+.form-control.ng-pristine {
+  background-color: #E0E0E0;
+}
+.form-control.ng-dirty {
+  background-color: whitesmoke;
+}
+
 .container #report-number {
   text-align: center;
 }

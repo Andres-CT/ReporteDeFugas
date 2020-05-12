@@ -19,7 +19,7 @@ body {
 }
 
 .text-heading {
-  margin-top: 12%;
+  margin-top: 10%;
 }
 
 .text-secondary {
@@ -114,4 +114,12 @@ button{
 
 .container .mt-4, h2 {
   text-align: center;
+}
+
+@media (max-width: 992px)
+{
+  .text-heading {
+    margin-top: 20%;
+  }
+
 }
