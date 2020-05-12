@@ -10,6 +10,11 @@ import { DataService } from '../data.service';
 export class ReporteAdminComponent implements OnInit {
   text='';
   apellido = '';
+  correo = '';
+  direccion = '';
+  referencia = '';
+  profesion = '';
+  comentarios = '';
   constructor(//public ReporteComponent: ReporteComponent
   private data: DataService) {}
   
@@ -18,6 +23,11 @@ export class ReporteAdminComponent implements OnInit {
   ngOnInit(): void {
     this.data.share.subscribe(a => this.text = a);
     this.data.share2.subscribe(b => this.apellido = b);
+    this.data.share3.subscribe(c => this.correo = c);
+    this.data.share4.subscribe(d => this.direccion = d);
+    this.data.share5.subscribe(e => this.referencia = e);
+    this.data.share6.subscribe(f => this.referencia = f);
+    this.data.share7.subscribe(g => this.referencia = g);
     
   }
   /*
