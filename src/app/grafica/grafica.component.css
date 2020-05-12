@@ -1,17 +1,21 @@
-
-.container-chart{
+.container-chart {
   width: 100%;
   height: 100%;
 }
-.bar{
+
+.bar {
   width: 100%;
   height: 33vw;
 }
+
 .doughnut {
   position: relative;
   width: 100%;
   height: 50vw;
 }
+
 .text-heading {
   margin-top: 16%;
 }
+
+/*# sourceMappingURL=grafica.component.css.map */

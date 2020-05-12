@@ -41,6 +41,28 @@ export class ReporteComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  updateText(text){
+    this.data.updateData(text);
+  }
+  updateApellido(apellido){
+    this.data.updateApellido(apellido);
+  }
+  updateCorreo(correo){
+    this.data.updateCorreo(correo);
+  }
+  updateDireccion(direccion){
+    this.data.updateDireccion(direccion);
+  }
+  updateReferencia(referencia){
+    this.data.updateReferencia(referencia);
+  }
+  updateProfesion(profesion){
+    this.data.updateProfesion(profesion);
+  }
+  updateComentarios(comentarios){
+    this.data.updateComentarios(comentarios);
+  }
   
   onSubmit() {
     console.log(this.registrationForm.value);
@@ -51,5 +73,6 @@ export class ReporteComponent implements OnInit {
         error => console.log('Error!', error)
       ); */
   }
+  
   
 }

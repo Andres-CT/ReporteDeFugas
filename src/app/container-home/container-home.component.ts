@@ -21,11 +21,15 @@ import { trigger, style, transition, animate, state }  from '@angular/animations
   ]
   
 })
+
+
 export class ContainerHomeComponent implements OnInit {
   state: string = 'small'
   constructor() { }
 
+  
   ngOnInit(): void {
+    
   } 
  
 

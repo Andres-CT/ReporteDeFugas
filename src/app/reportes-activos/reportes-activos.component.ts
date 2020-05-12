@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-reportes-activos',
@@ -10,6 +10,13 @@ export class ReportesActivosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    let persona= localStorage.getItem("persona"); 
+    console.log(persona);
   }
+
+  getNombre(nombre){
+     return nombre;
+  }
+
 
 }
