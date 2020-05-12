@@ -29,12 +29,8 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.getListBooks();
+    
   }
-  getListBooks() {
-    this.dataApi.getAllBooks().subscribe(books => console.log(books));
-  }
-
   
 
 }

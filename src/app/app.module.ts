@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Services
 import { DataApiService } from './services/data-api.service';
+import { RouterModule } from '@angular/router';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -52,7 +53,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
   ],
   providers: [DataApiService],
   bootstrap: [AppComponent]
