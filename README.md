@@ -10,13 +10,15 @@ Jorge de la Vega A01650285
 Este proyecto tiene como proposito hacer una aplicación para reportar fugas de agua en la Ciudad de México. 
 
 ## Correr el proyecto
-git clone <proyecto>
+Para poder hacer uso del proyecto, deberá contar con npm en su computadora. Siga los siguientes pasos:
 
-cd <proyecto>
+1. git clone *proyecto*
+
+2. cd *proyecto*
   
-npm install
- 
-npm start
+3. npm install
+  
+4. npm start
  
  
 
