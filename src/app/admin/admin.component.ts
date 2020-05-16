@@ -8,25 +8,25 @@ import { AuthService } from '../services/auth.service';
 })
 export class AdminComponent implements OnInit {
 
-  loginUserData = {}
-  constructor(public fb: FormBuilder, private Auth:AuthService) { }
-  
-  registrationForm= this.fb.group({
+  loginUserData = {};
+  constructor(public fb: FormBuilder, private Auth: AuthService) { }
+
+  registrationForm = this.fb.group({
     correo: [''],
     contrasena: ['']
   });
   ngOnInit(): void {
   }
   onSubmit() {
-    const correo = this.registrationForm.controls['correo'].value;
-    const contrasena = this.registrationForm.controls['contrasena'].value;
+    const correo = this.registrationForm.controls.correo.value;
+    const contrasena = this.registrationForm.controls.contrasena.value;
     console.log(correo, contrasena);
-  
-    localStorage.setItem('loggedIn','true')
-    localStorage.setItem("persona",correo )
-    localStorage.setItem("contrasena",contrasena)
-    
+
+    localStorage.setItem('loggedIn', 'true');
+    localStorage.setItem('persona', correo );
+    localStorage.setItem('contrasena', contrasena);
+
   }
-  //obtenerLocalStorage
+  // obtenerLocalStorage
 
 }

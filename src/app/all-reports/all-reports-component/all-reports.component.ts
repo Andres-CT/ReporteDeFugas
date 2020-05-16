@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Report } from "../report"
-import { AllReportsService } from "../services/all-reports.service"
+import { Report } from '../report';
+import { AllReportsService } from '../services/all-reports.service';
 
 @Component({
   selector: 'app-all-reports',

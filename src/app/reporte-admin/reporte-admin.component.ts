@@ -8,17 +8,17 @@ import { DataService } from '../data.service';
   styleUrls: ['./reporte-admin.component.scss']
 })
 export class ReporteAdminComponent implements OnInit {
-  text='';
+  text = '';
   apellido = '';
   correo = '';
   direccion = '';
   referencia = '';
   profesion = '';
   comentarios = '';
-  constructor(//public ReporteComponent: ReporteComponent
+  constructor(// public ReporteComponent: ReporteComponent
   private data: DataService) {}
-  
-  
+
+
 
   ngOnInit(): void {
     this.data.share.subscribe(a => this.text = a);
@@ -28,7 +28,7 @@ export class ReporteAdminComponent implements OnInit {
     this.data.share5.subscribe(e => this.referencia = e);
     this.data.share6.subscribe(f => this.referencia = f);
     this.data.share7.subscribe(g => this.referencia = g);
-    
+
   }
   /*
   loadApiData() {

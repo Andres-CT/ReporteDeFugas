@@ -5,13 +5,13 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  private content = new BehaviorSubject<string>("N/A");
-  private content2 = new BehaviorSubject<string>("N/A");
-  private content3 = new BehaviorSubject<string>("N/A");
-  private content4 = new BehaviorSubject<string>("N/A");
-  private content5 = new BehaviorSubject<string>("N/A");
-  private content6 = new BehaviorSubject<string>("N/A");
-  private content7 = new BehaviorSubject<string>("N/A");
+  private content = new BehaviorSubject<string>('N/A');
+  private content2 = new BehaviorSubject<string>('N/A');
+  private content3 = new BehaviorSubject<string>('N/A');
+  private content4 = new BehaviorSubject<string>('N/A');
+  private content5 = new BehaviorSubject<string>('N/A');
+  private content6 = new BehaviorSubject<string>('N/A');
+  private content7 = new BehaviorSubject<string>('N/A');
   public share = this.content.asObservable();
   public share2 = this.content2.asObservable();
   public share3 = this.content3.asObservable();
@@ -20,7 +20,7 @@ export class DataService {
   public share6 = this.content6.asObservable();
   public share7 = this.content7.asObservable();
   constructor() { }
-  
+
   updateData(text){
     this.content.next(text);
   }

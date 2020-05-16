@@ -7,10 +7,10 @@ import {
     animateChild,
     animate,
     keyframes,
-  } from '@angular/animations'; 
+  } from '@angular/animations';
 
-  export const slider =
-  trigger('routeAnimations', [ 
+export const slider =
+  trigger('routeAnimations', [
     transition('inicio => reporte', slideTo('right')),
     transition('inicio => estado', slideTo('right')),
     transition('inicio => admin', slideTo('right')),

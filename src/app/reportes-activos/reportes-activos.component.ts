@@ -10,7 +10,7 @@ export class ReportesActivosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    let persona= localStorage.getItem("persona"); 
+    const persona = localStorage.getItem('persona');
     console.log(persona);
   }
 

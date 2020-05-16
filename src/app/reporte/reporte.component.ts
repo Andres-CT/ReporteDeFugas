@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-//import { User } from './user'
+// import { User } from './user'
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
-//import { NgForm } from '@angular/forms';
+// import { NgForm } from '@angular/forms';
 
 import { DataService } from '../data.service';
 @Component({
@@ -12,10 +12,10 @@ import { DataService } from '../data.service';
 export class ReporteComponent implements OnInit {
   text = '';
   constructor(public fb: FormBuilder, private data: DataService) { }
-  tipoPersonas = ["Reportero","Agente de la SSP", "Transeunte", "Comerciante", "Otro"];
-  //userModel = new User('','','','','', '','', null);
+  tipoPersonas = ['Reportero', 'Agente de la SSP', 'Transeunte', 'Comerciante', 'Otro'];
+  // userModel = new User('','','','','', '','', null);
 
-  registrationForm= this.fb.group({
+  registrationForm = this.fb.group({
     nombre: [''],
     apellido: [''],
     correo: [''],
@@ -63,16 +63,16 @@ export class ReporteComponent implements OnInit {
   updateComentarios(comentarios){
     this.data.updateComentarios(comentarios);
   }
-  
+
   onSubmit() {
     console.log(this.registrationForm.value);
-    /* 
+    /*
     this._reportService.reportservice(this.registrationForm.value)
       .subscribe(
         response => console.log('Success!', response),
         error => console.log('Error!', error)
       ); */
   }
-  
-  
+
+
 }
