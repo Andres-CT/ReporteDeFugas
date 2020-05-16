@@ -9,6 +9,10 @@ Jorge de la Vega A01650285
 
 Este proyecto tiene como proposito hacer una aplicación para reportar fugas de agua en la Ciudad de México. 
 
+## ng lint
+Para utilizar lint, asegurese que cuenta con lint instalado.
+Deberá correr el comando: ng lint
+
 ## Correr el proyecto
 Para poder hacer uso del proyecto, deberá contar con npm en su computadora. Siga los siguientes pasos:
 
@@ -18,7 +22,7 @@ Para poder hacer uso del proyecto, deberá contar con npm en su computadora. Sig
   
 3. npm install
   
-4. npm start
+4. ng serve
  
  
 
