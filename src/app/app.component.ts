@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { RouterOutlet } from '@angular/router';
-import { slider } from './route-animations'
+import { slider } from './route-animations';
 import { DataApiService } from './services/data-api.service';
 
 @Component({
@@ -13,9 +13,9 @@ import { DataApiService } from './services/data-api.service';
   ]
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'angular';
-  state: string = '';
+  state = '';
   constructor(public translate: TranslateService, private dataApi: DataApiService) {
     translate.addLangs(['es', 'en']);
     translate.setDefaultLang('es');
@@ -25,14 +25,11 @@ export class AppComponent {
   }
 
   prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
   }
 
   ngOnInit() {
-    
   }
-  
-
 }
 
 

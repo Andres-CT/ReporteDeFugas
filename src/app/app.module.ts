@@ -7,8 +7,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderAdminComponent } from './header-admin/header-admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeaderNoRibbonComponent } from './header-no-ribbon/header-no-ribbon.component';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader'
-import { HttpClientModule, HttpClient} from '@angular/common/http'
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { AppComponent } from './app.component';
 import { TranslateComponent } from './translate/translate.component';
@@ -16,7 +16,7 @@ import { AllReportsComponent } from './all-reports/all-reports-component/all-rep
 import { GraficaComponent } from './grafica/grafica.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-//Services
+// Services
 import { DataApiService } from './services/data-api.service';
 import { RouterModule } from '@angular/router';
 

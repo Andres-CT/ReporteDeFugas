@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ReportserviceService {
 
-  _url = 'http://localhost:3000/'
-  constructor(private _http:HttpClient) {}
+  _url = 'http://localhost:3000/';
+  constructor(private _http: HttpClient) {}
 
   reportservice(userData) {
     return this._http.post<any>(this._url, userData);
