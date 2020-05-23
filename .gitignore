@@ -2,10 +2,6 @@
 # Ignore node_modules
 node_modules/
 
-# Linting reports
-pylint/
-lint/
-reports/
 
 .DS_Store
 .DS_STORE
