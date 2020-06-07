@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ReporteClienteServiceService } from './reporte-cliente-service.service';
 
 @Component({
   selector: 'app-reporte-cliente-enviado',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReporteClienteEnviadoComponent implements OnInit {
 
-  constructor() { }
+  numeroReporte: [];
 
+  constructor(public reporteService: ReporteClienteServiceService) {}
   ngOnInit(): void {
+    this.obtenerReportes();
   }
+  obtenerReportes() {
+    this.reporteService.getReportes().subscribe((data) => {
+      this.numeroReporte = data;
+      console.log('respuesta de reportes->' + this.numeroReporte);
+    });
+  }
+
+  
 
 }
