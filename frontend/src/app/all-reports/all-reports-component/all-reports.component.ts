@@ -8,12 +8,17 @@ import { AllReportsService } from '../services/all-reports.service';
   styleUrls: ['./all-reports.component.scss']
 })
 export class AllReportsComponent{
-
   All_reports: Report[];
-
-  constructor(Service: AllReportsService)
-  {
-    this.All_reports = Service.getReports();
+  constructor(public Service: AllReportsService){}
+  
+  ngOnInit(): void {
+    this.getReports();
   }
 
+  getReports() {
+    this.Service.getReportes().subscribe((data) => {
+      this.All_reports = data;
+      console.log('respuesta de alumno->' + this.All_reports);
+    });
+  }
 }
