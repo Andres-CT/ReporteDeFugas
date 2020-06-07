@@ -25,8 +25,6 @@ export class ReporteComponent implements OnInit {
   constructor(public fb: FormBuilder, private data: DataService, private http: HttpClient) { }
   tipoPersonas = ['Reportero', 'Agente de la SSP', 'Transeunte', 'Comerciante', 'Otro'];
   // userModel = new User('','','','','', '','', null);
-  
-  
 
   registrationForm = this.fb.group({
     nombre: "",
@@ -72,7 +70,7 @@ export class ReporteComponent implements OnInit {
       console.log(this.registrationForm.value);
       const data = this.registrationForm.value;
       const headers= new HttpHeaders({'Content-Type':'application/json'});
-      this.http.post(this.endpoint,data, {headers}).subscribe(
+      this.http.post("http://localhost:8080/api/reportes",data, {headers}).subscribe(
         res=>{
           console.log(res);
         },
