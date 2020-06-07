@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 // import { User } from './user'
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 // import { NgForm } from '@angular/forms';
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { DataService } from '../data.service';
+import { map, catchError, tap } from 'rxjs/operators';
+import { of } from 'rxjs';
+
 @Component({
   selector: 'app-reporte',
   templateUrl: './reporte.component.html',
@@ -11,12 +14,22 @@ import { DataService } from '../data.service';
 })
 export class ReporteComponent implements OnInit {
   text = '';
-  constructor(public fb: FormBuilder, private data: DataService) { }
+  endpoint: 'http://localhost:8080/api/reportes';
+
+  httpOptions = {
+    header: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  }
+
+  constructor(public fb: FormBuilder, private data: DataService, private http: HttpClient) { }
   tipoPersonas = ['Reportero', 'Agente de la SSP', 'Transeunte', 'Comerciante', 'Otro'];
   // userModel = new User('','','','','', '','', null);
+  
+  
 
   registrationForm = this.fb.group({
-    nombre: [''],
+    nombre: "",
     apellido: [''],
     correo: [''],
     direccion: [''],
@@ -27,26 +40,16 @@ export class ReporteComponent implements OnInit {
 
   });
 
-  /*
-  registrationForm = new FormGroup({
-      nombre: new FormControl('Jorge'),
-      apellido: new FormControl(''),
-      correo: new FormControl(''),
-      direccion: new FormControl(''),
-      referencia: new FormControl(''),
-      tipoPersona: new FormControl(''),
-      comentario: new FormControl(''),
-      imagen: new FormControl('')
-  });*/
-
   ngOnInit(): void {
   }
 
   updateText(text){
     this.data.updateData(text);
+    console.log("data shidori: " + this.data.updateData(text));
   }
   updateApellido(apellido){
     this.data.updateApellido(apellido);
+    console.log("data shidori: " + this.data.updateApellido(apellido));
   }
   updateCorreo(correo){
     this.data.updateCorreo(correo);
@@ -65,13 +68,19 @@ export class ReporteComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.registrationForm.value);
-    /*
-    this._reportService.reportservice(this.registrationForm.value)
-      .subscribe(
-        response => console.log('Success!', response),
-        error => console.log('Error!', error)
-      ); */
+    if(this.registrationForm.value) {
+      console.log(this.registrationForm.value);
+      const data = this.registrationForm.value;
+      const headers= new HttpHeaders({'Content-Type':'application/json'});
+      this.http.post(this.endpoint,data, {headers}).subscribe(
+        res=>{
+          console.log(res);
+        },
+        err=>{
+          console.log('err:'+err);
+        }
+      );
+    }
   }
 
 

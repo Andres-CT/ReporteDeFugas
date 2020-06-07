@@ -37,8 +37,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     HeaderNoRibbonComponent,
     AllReportsComponent,
     GraficaComponent
-
-
   ],
   imports: [
     BrowserModule,
