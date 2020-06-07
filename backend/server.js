@@ -30,6 +30,8 @@ db.once('openUri',function(){
 //middleware
 var router = express.Router();
 
+//Contador para numero de reportes
+var counter=0;
 router.use(function(req, res, next) {
     next();
 });//habilita el middleware
@@ -49,6 +51,7 @@ router.get("/api",function(req, res){
 //declarar modelos
 var Reporte = require("./app/models/reporte");
 router.route("/reportes").post(async function(req,res) {
+        counter = counter + 1;
         var reporte = new Reporte();
         reporte.nombre = req.body.nombre;
         reporte.apellido = req.body.apellido;
@@ -57,6 +60,7 @@ router.route("/reportes").post(async function(req,res) {
         reporte.referencia = req.body.referencia;
         reporte.tipoPersona = req.body.tipoPersona;
         reporte.comentario = req.body.comentario;
+        reporte.numeroReporte = counter; 
         /*
         if (reporte.nombre == "") {
             res.status(400).send({
