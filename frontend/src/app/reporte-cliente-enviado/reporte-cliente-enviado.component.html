@@ -7,7 +7,10 @@
       <h1>{{ "CLIENTEENVIADO.TITLE" | translate }} </h1>
       <br>
       <h2>{{ "CLIENTEENVIADO.SUBTITLE"| translate }} </h2>
-      <h3>00000000</h3>  
+      
+      <div *ngIf="numeroReporte">
+        <h3>{{numeroReporte}}</h3>
+      </div>
     </div>
     <br><br>
     <a [routerLink]="['/home']" routerLinkActive="router-link-active"  class="btn btn-success" role="button">{{ "CLIENTEENVIADO.INICIO"| translate }}</a>
