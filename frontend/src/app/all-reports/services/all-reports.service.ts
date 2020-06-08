@@ -3,12 +3,17 @@ import { HttpClient, HttpHeaders, HttpErrorResponse} from '@angular/common/http'
 import { Observable, of, throwError } from 'rxjs';
 import { map, retry, catchError, tap } from 'rxjs/operators';
 import { Report } from '../report'
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AllReportsService {
 
   reporte: Report[];
+  
+  private messageSource = new BehaviorSubject<string>("default message");
+  currentMessage = this.messageSource.asObservable();
 
   getReportes(): Observable<any> {
     console.log('estoy en el getALumnos');
@@ -42,6 +47,10 @@ export class AllReportsService {
     }
     window.alert(errorMessage);
     return throwError(errorMessage);
+  }
+  
+  changeMessage(message: string) {
+    this.messageSource.next(message)
   }
 
 
