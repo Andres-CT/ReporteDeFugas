@@ -2,20 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse} from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { map, retry, catchError, tap } from 'rxjs/operators';
-import { Report } from '../report'
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Reporte } from '../models/reporte';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AllReportsService {
+export class ReporteService {
 
-  reporte: Report[];
-  
-  private messageSource = new BehaviorSubject<string>("default message");
-  currentMessage = this.messageSource.asObservable();
+  reporte: Reporte[]
 
-  getReportes(): Observable<any> {
+  getReportes(id: string): Observable<any> {
     console.log('estoy en el getALumnos');
     var headerDict = {
       'Content-Type': 'application/json',
@@ -27,12 +23,23 @@ export class AllReportsService {
       headers: new HttpHeaders(headerDict),
     };
 
-    return this.http.get('http://localhost:8080/api/reportes', requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
+    
+
+    return this.http.get('http://localhost:8080/api/reportes' + '/' + id, requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
+    //return this.http.get('http://localhost:8080/api/reportes', requestOptions);
+    //return this.http.get('http://localhost:8080/api/reportes', requestOptions);
+    //return this.http.get('http://localhost:8080/api/reportes' + '/' + '5edd22ddea83b761f8d358e5');
+    
   }
 
+
+  getId(_id) {
+    return this.http.get('http://localhost:8080/api/reportes' + '/' + '5edd22ddea83b761f8d358e5');
+  }
+  
   private extractData(res: Response) {
-    let body = res;
-    console.log(body)
+    let body = Array.of(res);
+    
     return body|| {};
   }
 
@@ -48,10 +55,6 @@ export class AllReportsService {
     window.alert(errorMessage);
     return throwError(errorMessage);
   }
-  
-  changeMessage(message: string) {
-    this.messageSource.next(message)
-  }
 
 
   //getReports() {
@@ -59,5 +62,4 @@ export class AllReportsService {
   //}
 
   constructor(private http: HttpClient) { }
-
 }
